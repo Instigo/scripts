@@ -36,8 +36,9 @@ sudo ldconfig
 
 # Build Tesseract
 cd /tmp
-git clone https://github.com/tesseract-ocr/tesseract.git
-cd tesseract
+wget https://tesseract-ocr.googlecode.com/files/tesseract-ocr-3.02.02.tar.gz
+tar -zxvf tesseract-ocr-3.02.02.tar.gz
+cd tesseract-ocr
 sudo ./autogen.sh
 sudo LDFLAGS="-L/usr/local/lib" CFLAGS="-I/usr/local/include" ./configure
 sudo make && sudo make install
